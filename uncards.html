@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+   
+.three-cards{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.card1 {
+    flex: 1 1 30%;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-content img {
+    width: 50px;
+    height: 50px;
+}
+
+.card1 h3 {
+    font-size: 1.2rem;
+}
+
+.textt {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive styling for small screens */
+.card-content img {
+    width: 100%;
+    height: auto;
+    max-width: 50px; /* Ensure it doesn't exceed 50px */
+}
+.card-content img {
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-width: 768px) {
+    .card1 {
+        flex: 1 1 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="three-cards">
+<div class="three card-container">
+    <div class="card1 card" style="background-color: #ce8635;">
+        <div class="card-content" >
+            <img src="assets/img/healthi.png" alt="Card Image">
+            <h3>HEALTH TIPS</h3>
+        </div>
+        <p class="textt card-text">Health is the condition of the human body which is free from any injury or illness.</p>
+    </div>
+    <div class="card1 card" style="background-color: #186662;">
+        <div class="card-content" >
+            <img src="assets/img/Latest.png" alt="Card Image">
+            <h3>LATEST NEWS</h3>
+        </div>
+        <p class="textt card-text">In health sector, India has made <br>enormous strides over the past decades.</p>
+    </div>
+    <div class="card1 card" style="background-color: #569dee;">
+        <div class="card-content"  >
+            <img src="assets/img/Visiting.png" alt="Card Image">
+            <h3>VISITING HOURS</h3>
+        </div>
+       <h3 class="textt card-text" style="color: white;">10:00am
+            <img src="assets/img/arrow.png" alt="" height="60px" width="60px">7:30pm
+        </h3>
+    </div>
+</div>
+</div>
+</body>
+</html>

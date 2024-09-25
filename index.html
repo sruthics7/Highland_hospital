@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highland Hospital Official</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo.jpeg" rel="icon">
+  <link href="assets/img/Logo.jpeg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      overflow-x: hidden;
+      /* Prevents horizontal scroll */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    .hero {
+    position: relative;
+    height: 80vh; /* Full viewport height */
+    background-image: url('assets/img/bg.jpeg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* Hero overlay to add a tint effect to the background */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Places the overlay behind the content */
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Bring content above the overlay */
+    align-items: left;
+    padding: 0 20px;
+    text-align: left;
+    
+}
+
+/* Logo styling */
+.logo {
+    width: 400px; /* Adjust size as needed */
+    margin-left: 60px;
+}
+
+/* Hero text styling */
+.hero-text p {
+    
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: 120px;
+    color: black;
+
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #00a8a8; /* Adjust the button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 120px;
+
+}
+
+.hero-btn:hover {
+    background-color: #008888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+    .logo {
+        width: 120px;
+    }
+    .hero-btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+    .cv {
+      height: 300px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 0;
+      text-align: center;
+      width: 280px;
+      margin: 0px 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+
+    .cv p {
+      color: white
+    }
+
+    .copyright {
+      background-color: #1f837e;
+
+    }
+
+    .copyright a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .swiper {
+      margin-top: 20px;
+    }
+
+
+    
+
+    input {
+      background-color: whitesmoke;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      border: 1px solid #ccc;
+
+    }
+
+    label {
+      color: rgb(36, 35, 35);
+    }
+
+    .navbar-nav {
+      padding-left: 90px;
+      justify-content: space-between;
+      font-size: 19px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+
+
+    .fa {
+      color: rgb(59, 59, 59);
+      /* Default color: grey */
+
+    }
+
+    .top-bar {
+      color: #3b3b3b;
+      /* White text color */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      /* Space between email and social icons */
+      align-items: center;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #696969;
+      padding-left: 93px;
+    }
+
+    .contact-info a {
+      width: 20px;
+      height: 20px;
+      filter: brightness(2) invert(4);
+
+    }
+
+    .social-icons a {
+      margin-left: 10px;
+      /* Space between icons */
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+      /* Ensure icons appear white on a black background */
+    }
+
+    .navbar {
+      padding: 15px;
+      color: #3f3e3e;
+      /* Add other navbar styling here */
+    }
+
+    .bru {
+      width: 130px;
+    }
+
+    .book {
+      border-color: #c49105;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+
+    /* 
+    .navbar {
+      border-top: 3px solid #f0af4e;
+      width: 3000px;
+      padding-top: 10px;
+    } */
+
+    @media (max-width: 768px) {
+      .navbar {
+        display: block;
+        /* Ensures navigation bar looks good on mobile */
+      }
+
+
+      .content {
+        padding: 10px;
+        /* Reduce padding for mobile */
+      }
+    }
+
+    .shape {
+      width: 1000px;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #4fb4af;
+      margin: 0 auto;
+
+    }
+
+    .min {
+      background-color: #81d4d0;
+    }
+
+    .three-column-flex {
+      display: flex;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+
+    .column {
+      flex: 1;
+      margin: 0 0px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border: 0px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+
+    .three-column-flex .column:first-child {
+      margin-left: 0;
+    }
+
+    .three-column-flex .column:last-child {
+      margin-right: 0;
+    }
+
+
+    .three-column {
+      display: flex;
+      margin-left: 150px;
+      color: #eaf7f9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      border: 0px;
+      height: 200px;
+      width: 1050px
+    }
+
+    @media (max-width: 768px) {
+      .three-column {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .three-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    .coloured-icon {
+      width: 30px;
+      height: 30px;
+      filter: brightness(63) saturate(100%) invert(1) sepia(1) hue-rotate(180deg) saturate(500%);
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(2) invert(4);
+    }
+
+    .navbar li a {
+      position: relative;
+      display: inline-block;
+      justify-content: space-between;
+    }
+
+    .navbar li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      background: #ce8635;
+      transition: width 0.3s;
+      left: 0;
+      bottom: 0;
+    }
+
+    .navbar li a:hover::after {
+      width: 100%;
+      /* Expands underline on hover */
+    }
+
+    .form-group {
+      color: black;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allows items to wrap to the next line */
+    }
+
+    .flex-item {
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: 768px) {
+      .flex-item {
+        flex: 1 1 100%;
+        /* Makes items stack vertically on mobile */
+      }
+    }
+
+
+    .sub {
+      border-radius: 4px;
+      border: 0;
+      margin-top: 30px;
+      margin-left: 80px;
+      background-color: #186662;
+      color: #f0f0f0;
+    }
+
+    .text {
+      margin-right: 4px;
+      margin-top: 15px;
+      padding-right: 10px;
+    }
+
+    #id {
+      width: 300px;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+      padding: 80px;
+      padding-right: 100px;
+      text-align: center;
+      color: aliceblue;
+      font-size: 10px;
+      flex: 1;
+      margin: 0 0px;
+      padding: 40px;
+      border: 0px;
+    }
+
+    .testimonial-item img {}
+
+    .column1,
+    .column2,
+    .column3 p {
+      padding-top: 40px;
+      font-size: 12px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+
+    .column1,
+    .column2,
+    h4 h5 {
+      padding-top: 40px;
+      font-size: 16px;
+      font-family: 'Raleway';
+    }
+
+
+    .column3 h6 {
+      font-size: 20px;
+      font-family: 'Raleway';
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin: 20px;
+      /* Adds a margin around the entire swiper */
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    .title-container h2 {
+      margin: 0 20px;
+      /* Add space around the text */
+      font-weight: bold;
+    }
+
+    .title-line {
+      flex-grow: 1;
+      /* Make the line flexible to fill the space */
+      height: 2px;
+      /* Set the thickness of the line */
+      background-color: orange;
+      /* Line color */
+    }
+
+    .title-container {
+      padding: 10px;
+    }
+
+    .next-button {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      /* Center the button */
+      padding: 10px 20px;
+      background-color: #1f837e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Button Hover Effect */
+    .next-button:hover {
+      background-color: #1f837e;
+    }
+
+
+
+
+    .cardin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .access {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 80%;
+      max-width: 1200px;
+
+    }
+
+    .boxing {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      transition: box-shadow 0.3s ease;
+      height: 350px;
+      border-radius: 0px;
+    }
+
+    .boxing:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .in {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .boxing h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: white;
+      font-family: 'Raleway';
+    }
+
+    .boxing p {
+      font-size: 1em;
+      color: white;
+      font-family: 'Open Sans';
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .access {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .access {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .three-cards {
+      font-family: 'Open Sans';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .three {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .card1 {
+      flex: 1 1 30%;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      border-radius: 0px;
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: white;
+    }
+
+    .card-content img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .card1 h3 {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    .textt {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    /* Responsive styling for small screens */
+    .card-content img {
+      width: 100%;
+      height: auto;
+      max-width: 50px;
+      /* Ensure it doesn't exceed 50px */
+    }
+
+    .card-content img {
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 768px) {
+      .card1 {
+        flex: 1 1 100%;
+      }
+    }
+
+    .three-card {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .thre {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .card2 {
+      flex: 1 1 30%;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      background-color: transparent;
+      border: 0px;
+
+    }
+
+    .card-content1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .card-content1 img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .card2 h3 {
+      font-size: 1.2rem;
+    }
+
+    .textt {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive styling for small screens */
+    .card-content1 img {
+      width: 100%;
+      height: auto;
+      max-width: 50px;
+      /* Ensure it doesn't exceed 50px */
+    }
+
+    .card-content1 img {
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 768px) {
+      .card2 {
+        flex: 1 1 100%;
+      }
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: linear-gradient(to bottom, #e6a659 50%, #fff 50%);
+      padding: 10px;
+      margin-bottom: 50px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: auto;
+    }
+
+    /* Larger phone image */
+    .image-container.phone img {
+      width: 200px;
+      height: auto;
+    }
+
+    .image-container.phone img {
+      width: 200px;
+      height: auto;
+    }
+
+    .image-container.qr img {
+      width: 100px;
+      /* QR code size */
+    }
+
+    .image-container.qr p {
+      margin-top: 10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .image-container img {
+        width: 150px;
+        padding-top: 30px;
+      }
+
+      .image-container.phone img {
+        width: 150px;
+      }
+
+      .image-container.qr img {
+        width: 80px;
+      }
+    }
+
+    .close-btn {
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      display: none;
+      /* Hide by default */
+    }
+
+    .line {
+      width: 100%;
+      height: 4px;
+      /* Adjust thickness of the line */
+      background-color: #e29d64;
+      /* Line color */
+    }
+  </style>
+
+  <script>
+    if (window.innerWidth < 1024) {
+      document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1024');
+    }
+  </script>
+
+<body>
+
+
+
+  <header id="header">
+    <div class="top-bar">
+      <div class="contact-info">
+        <span class="email" style="color: #4d4d4d;"><a href="mailto:reachus@highlandhospital.in"><a href="#"><img
+                src="assets/img/mail.png" alt="mail" class="coloured-icon" class="mailimg"></a>
+            reachus@highlandhospital.in</a></span>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="assets/img/twitter.png" alt="Facebook" class="coloured-icon"></a>
+        <a href="#"><img src="assets/img/facebook.png" alt="Twitter" class="coloured-icon"></a>
+        <a href="#"><img src="assets/img/instagram.png" alt="Instagram" class="coloured-icon"></a>
+        <a href="#"><img src="assets/img/youtube.png" alt="Youtube" class="coloured-icon"></a>
+
+      </div>
+    </div>
+    <div class="shape">
+
+    </div>
+    <div class="line"></div>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+
+
+        <nav id="navmenu" class="navbar navmenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Specialities</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Nursing</a></li>
+            <li><a href="#">International-Patient</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li class="nav-item"><a class="nav-link" href="#"><button
+                  style="background-color:rgb(202, 128, 16); border-radius: 4px; border: 0px;">Contact</button></a></li>
+                  <span class="close-btn" onclick="closeNav()">×</span> <!-- Close button -->
+
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+        </nav>
+       <script>
+        function closeNav() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+       </script>
+
+      </div>
+    </header>
+
+    <body>
+
+      <!-- Contact Us button -->
+
+      <!-- The popup form -->
+
+
+      </ul>
+      </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="buttonn">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-overlay"></div> <!-- Overlay for background image tint -->
+        <div class="hero-content">
+            <img src="assets/img/highlndlogo.png" alt="Highland Hospital Logo" class="logo"> <!-- Replace with your logo -->
+            <div class="hero-text">
+                <p>At Highland Hospital it is not just health-care but care for your health</p>
+                <a href="#" class="hero-btn">Our Specialties</a>
+            </div>
+        </div>
+    </section>
+      <!-- Content Section -->
+      <section class="custom-shape">
+        <div class="container">
+          <h2 style="font-family: 'Raleway';">Welcome to Highland Hospital</h2>
+          <h5><b><u>Established in 1995</u></b></h5>
+          <p>Our 250 bedded hospital brings you the best in multispecialty treatment with state-of-the-art technology
+            focusing on various specialties including Critical Care, Cardiology, Cardiac Surgery, Orthopaedic & Joint
+            Replacement, Neurology, Neuro-Surgery, Pulmonology, Gastroenterology, Diabetes and Endocrinology,
+            Paediatrics,
+            Gynaecology, Nephrology, Urology, and many more. The focus of healthcare at Highland Hospital is the health
+            and wellbeing of our patients, utilising the latest infrastructure and qualified medical expertise available
+            while at the same time ensuring affordability.</p>
+          <a href="#" class="bru btn mt-4" style="background-color: #1f837e;color: #eaf7f9;">Know More</a>
+        </div>
+      </section>
+      <!-- test -->
+      <!-- <section id="testimonials" class="testimonials section">
+
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 10
+            }
+          }
+        }
+      </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" style="background-color: #4d9e9b; color: #eaf7f9;">
+                <img src="assets/img/05.png" class="testimonial-img" alt="">
+                <h3>FIND A DOCTOR</h3>
+
+                <p>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item" style="background-color: #c49105; color: #eaf7f9;">
+                <img src="assets/img/06.png" class="testimonial-img" alt="">
+                <h3>TEST RESULTS</h3>
+
+                <p>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" style="background-color: #2a7a80; color: #eaf7f9;">
+                <img src="assets/img/07.png" class="testimonial-img" alt="">
+                <h3>ONLINE ADMISSI0N</h3>
+
+                <p>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" style="background-color: #569dee; color: #eaf7f9;">
+                <img src="assets/img/08.png" class="testimonial-img" alt="">
+                <h3>PATIENT ACCES</h3>
+
+                <p>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" style="background-color: #569dee;">
+                <img src="assets/img/08.png" class="testimonial-img" alt="">
+
+
+                <p>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                  </span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+     -->
+      <!-- /Testimonials Section -->
+      <!-- end test -->
+
+      <!-- card carousal -->
+      <section class="cardin">
+        <div class="access card-container">
+          <div class="boxing card" style="background-color: #4d9e9b;">
+            <div class="in icon">
+              <img src="assets/img/05.png" height="70px" width="70px">
+            </div>
+            <h3>FIND A DOCTOR</h3>
+            <p>more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+              Ipsum</p>
+          </div>
+          <div class="boxing card" style="background-color: #c49105;;">
+            <div class="in icon">
+              <img src="assets/img/07.png" height="70px" width="70px">
+            </div>
+            <h3>TEST RESULTS</h3>
+            <p>more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+              Ipsum</p>
+          </div>
+          <div class="boxing card" style="background-color: #2a7a80;">
+            <div class="in icon">
+              <img src="assets/img/08.png" height="70px" width="70px">
+            </div>
+            <h3>ONLINE ADMISSI0N</h3>
+            <p>more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+              Ipsum</p>
+          </div>
+          <div class="boxing card" style="background-color: #569dee;;">
+            <div class="in icon">
+              <img src="assets/img/05.png" height="70px" width="70px">
+            </div>
+            <h3>PATIENT ACCES</h3>
+            <p>more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+              Ipsum</p>
+          </div>
+        </div>
+      </section>
+      <section class="vision-mission">
+        <style>
+          .con {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+          }
+
+          .con::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #60d5c7;
+            z-index: -1;
+          }
+
+
+          .bod {
+            width: 300px;
+            border-radius: 0px;
+            overflow: hidden;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            transition: transform 0.3s ease;
+            align-items: center;
+            border: 0px;
+            background-color: #a0dad7;
+          }
+
+          .bod:hover {
+            transform: scale(1.05);
+          }
+
+          .bod img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-right: 5px solid orange;
+            border-radius: 15px;
+
+          }
+
+          .text-box {
+            background-color: #ffffff;
+            padding: 15px;
+            width: 280px;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            box-sizing: 2px;
+            padding-left: 20px;
+          }
+
+          .text-box h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+
+          .text-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+
+          .patient {
+            padding-top: 70px;
+          }
+        </style>
+        <div class="con container">
+          <div class="bod card">
+            <img src="assets/img/vision-min.jpeg" alt="Vision Image ">
+            <div class="text-box">
+              <h2 style="color: black; ">VISION</h2>
+              <p>To constantly strive to promote and advance the health and wellbeing of our patients through excellence
+                and accountability in patient care.</p>
+            </div>
+          </div>
+
+          <div class="bod card">
+            <img src="assets/img/Mission.JPG" alt="Mission Image">
+            <div class="text-box">
+              <h2 style="color: black;">MISSION</h2>
+              <p>To deliver superior quality health care with a human touch, in a caring, compassionate and hygienic
+                environment. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section appointment -->
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6">
+
+
+            <img src="assets/img/doct.png" class="card-img-top" alt="Vision">
+            <div class="card-body">
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="book card book">
+              <form class="booking">
+                <div class="form-group" style="background-color: #1f837e; border-radius: 25px; color: #f0f0f0;">
+                  <p>Book an Appointment</p>
+
+                </div>
+                <table>
+                  <form class="form-container">
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                          <input type="text" id="name" name="name" placeholder="Name" class="text" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" id="state" name="state" placeholder="State" class="text" required>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <input type="text" id="doctor" name="doctor" placeholder="doctor" class="text" required>
+                          <input type="text" id="email" name="email" placeholder="email" class="text" required>
+                        </div>
+                      </td>
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                          <input type="text" id="phone" name="phone" placeholder="phone number" class="text" required>
+                      </td>
+            </div>
+            </tr>
+
+            </tr>
+
+            </table>
+
+            <button type="submit" class="btn btn-warning">Book Now</button>
+            </form>
+            <div class="card-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <!--section patient services-->
+      <section class="out-patient-services">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="patient">
+                <h2 class="card-title">Out Patient-Services</h2>
+                <p class="tex">We provide the following features</p>
+                <div class="card-body">
+
+                  <div class="row">
+                    <style>
+                      .tab {
+                        margin-left: 20px;
+                      }
+                    </style>
+                    <table style="height: 250px; width:600px" class="tab">
+                      <tr>
+                        <th>
+                          <div class="serv col-6 col-sm-4"><img src="assets/img/Surgeryicon.png" alt="icon" id-"icon"
+                              style="background-color:#43c0ba; border-radius: 30px;" height="50px" ; width="50px;"
+                              class="ho">
+                          </div>
+                        </th>
+                        <th>
+                          <h6 style="text-align: left;"><b>Health</b><br>
+                            The First Wealth <br> is Health
+                          </h6>
+                        </th>
+
+                        <th>
+                          <div class="serv col-6 col-sm-4"><img src="assets/img/careers.png" alt="icon" id-"icon"
+                              style="background-color:#43c0ba; border-radius: 30px;" height="60px" width="50px"
+                              class="ho">
+                          </div>
+                        </th>
+                        <th>
+                          <h6 style="text-align: left;"><b>Surgery</b><br>
+                            The Truth Like Surgery <br> May
+                            Hurt But It Cures
+                          </h6>
+
+                        </th>
+
+                      </tr>
+
+                      <!-- Force next columns to break to new line at md breakpoint and up -->
+                      <div class=" w-100 d-none d-md-block"></div>
+                      <tr>
+                        <th>
+                          <div class="serv col-6 col-sm-4"><img src="assets/img/calender.png" alt="icon" id-"icon"
+                              style="background-color:#43c0ba; border-radius: 30px;" height="50px" width="50px"
+                              class="ho">
+                          </div>
+                        </th>
+                        <th>
+                          <h6 style="text-align: left;"><b>Careers</b><br>
+                            Be so good they <br> can't ignore you
+                          </h6>
+                        </th>
+                        <th>
+                          <div class="serv col-6 col-sm-4"> <img src="assets/img/health.png" alt="icon" id-"icon"
+                              style="background-color:#43c0ba; border-radius: 30px;" height="50px" width="50px"
+                              class="ho">
+                          </div>
+                        </th>
+                        <th>
+                          <h6 style="text-align: left;"><b>Planning</b><br>
+                            If you can dream it <br> you can do it
+                            <h6>
+                        </th>
+
+                      </tr>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <img src="assets/img/Out Patient-min.jpeg " alt="Mission" height="420px">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+  </header>
+  <section>
+    <div class="orange-banner"></div>
+    <div class="banner">
+      <div class="image-container">
+        <img src="assets/img/Father & Son-01.png" alt="Father and Son">
+      </div>
+      <div class="image-container large">
+        <img src="assets/img/Phone-01.png" alt="Mobile App">
+      </div>
+      <div class="image-container qr">
+        <img src="assets/img/qr.PNG" alt="QR Code">
+        <p>Download Our Mobile App</p>
+      </div>
+      <div class="image-container mom">
+        <img src="assets/img/MOM & girl-01.png" alt="Mother and Daughter">
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="min">
+    <div class="three-cards">
+      <div class="three card-container">
+        <div class="card1 card" style="background-color: #ce8635;">
+          <div class="card-content">
+            <img src="assets/img/healthi.png" alt="Card Image">
+            <h3>HEALTH TIPS</h3>
+          </div>
+          <p class="textt card-text">Health is the condition of the human body which is free from any injury or illness.
+          </p>
+        </div>
+        <div class="card1 card" style="background-color: #186662;">
+          <div class="card-content">
+            <img src="assets/img/Latest.png" alt="Card Image">
+            <h3>LATEST NEWS</h3>
+          </div>
+          <p class="textt card-text">In health sector, India has made <br>enormous strides over the past decades.</p>
+        </div>
+        <div class="card1 card" style="background-color: #569dee;">
+          <div class="card-content">
+            <img src="assets/img/Visiting.png" alt="Card Image">
+            <h3>VISITING HOURS</h3>
+          </div>
+          <h3 class="textt card-text" style="color: white;">10:00am
+            <img src="assets/img/arrow.png" alt="" height="60px" width="60px">7:30pm
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="title-container">
+      <div class="title-line"></div>
+      <h2>Services</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="container">
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/pi1.jpg" alt="Image 1"></div>
+          <div class="swiper-slide"><img src="assets/img/pi2.jpg" alt="Image 2"></div>
+          <div class="swiper-slide"><img src="assets/img/pi3.jpg" alt="Image 3"></div>
+          <div class="swiper-slide"><img src="assets/img/pi1.jpg" alt="Image 4"></div>
+          <div class="swiper-slide"><img src="assets/img/pi2.jpg" alt="Image 5"></div>
+          <div class="swiper-slide"><img src="assets/img/pi3.jpg" alt="Image 6"></div>
+        </div>
+        <!-- Pagination and Navigation (optional) -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
+      <a href="gallary.html" style="align-items: end;"><button class="next-button">Gallery</button>
+      </a>
+
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+    </div>
+    <div class="three-card">
+      <div class="thre card-container">
+        <div class="card2 card">
+          <div class="card-content1">
+            <img src="assets/img/Location.png" alt="Card Image">
+            <h3>Location</h3>
+          </div>
+          <p class="text1 card-text">Mother Theresa Road, Kankanady, Highland Hospitals, Mangaluru, Karnataka 575002,
+            India.</p>
+        </div>
+        <div class="card2 card">
+          <div class="card-content1">
+            <img src="assets/img/Call.png" alt="Card Image">
+            <h3>Emergency 24*7</h3>
+          </div>
+          <p class="text1 card-text">0824-4235555</p>
+        </div>
+        <div class="card2 card">
+          <div class="card-content1">
+            <img src="assets/img/E-mail.png" alt="Card Image">
+            <h3>Email</h3>
+
+          </div>
+          <p class="text1 card-text"> reachus@highlandhospital.in</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+            <ul class="adress">
+              <span>Specialities</span>
+              <li>
+                <p>General Medicine</p>
+              </li>
+
+              <li>
+                <p>General Surgery</p>
+              </li>
+              <li>
+                <p>Orthopediac & Trauma Care</p>
+              </li>
+              <li>
+                <p>Total Knee and Hip replacement</p>
+              </li>
+              <li>
+                <p>Arthroscopy and Sports Medicine</p>
+              </li>
+              <li>
+                <p>Pediatric and pediatric Surgery</p>
+              </li>
+              <li>
+                <p>Nephrology</p>
+              </li>
+              <li>
+                <p>Gastroenterology</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+            <ul class="contact">
+
+              <li>
+                <a href="#">Opthalmology</a>
+              </li>
+
+              <li>
+                <a href="#">E.N.T Micro Surgery</a>
+              </li>
+
+              <li>
+                <a href="#">Neurology and Neuro Surgery</a>
+              </li>
+
+              <li>
+                <a href="#">Plastic & Reconstructive Surgery</a>
+              </li>
+
+              <li>
+                <a href="#">Maxillofacial Surgery</a>
+              </li>
+              <li>
+                <a href="#">Microvascular Surgery</a>
+              </li>
+              <li>
+                <a href="#">Endocrinology</a>
+              </li>
+              <li>
+                <a href="#">Urology & Androloy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <ul class="social">
+              <span>Contact us</span>
+              <form class="form-container">
+                <style>
+                  input {
+                    margin-top: 20px;
+                  }
+                </style>
+                <input type="text" name="firstName" placeholder="Name">
+                <input type="text" name="lastName" placeholder="email">
+                <input type="email" name="email" placeholder="phone number">
+                <input type="text" name="message" placeholder="message">
+                <center><button class="sub align-items-center">Submit</button></center>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <p class="copyright" style="color:black;"><strong>©</strong> <span style="font-size: 14px;">Highland Hospital.All
+        Rights Reserved | <a href="https://www.avanzodesign.in/">Designed and developed by avanzodesign.in</a></span>
+    </p>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

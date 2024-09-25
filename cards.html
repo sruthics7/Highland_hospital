@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General body styles */
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 80vh; /* Full viewport height */
+    background-image: url('assets/img/bg.jpeg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* Hero overlay to add a tint effect to the background */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Places the overlay behind the content */
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Bring content above the overlay */
+    align-items: left;
+    padding: 0 20px;
+    text-align: left;
+    
+}
+
+/* Logo styling */
+.logo {
+    width: 400px; /* Adjust size as needed */
+    margin-left: 60px;
+}
+
+/* Hero text styling */
+.hero-text p {
+    
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: 120px;
+
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #00a8a8; /* Adjust the button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 120px;
+
+}
+
+.hero-btn:hover {
+    background-color: #008888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+    .logo {
+        width: 120px;
+    }
+    .hero-btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div> <!-- Overlay for background image tint -->
+        <div class="hero-content">
+            <img src="assets/img/highlndlogo.png" alt="Highland Hospital Logo" class="logo"> <!-- Replace with your logo -->
+            <div class="hero-text">
+                <p>At Highland Hospital it is not just health-care but care for your health</p>
+                <a href="#" class="hero-btn">Our Specialties</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
