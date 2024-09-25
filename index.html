@@ -37,7 +37,7 @@
 
     .hero {
     position: relative;
-    height: 80vh; /* Full viewport height */
+    height: 75vh; /* Full viewport height */
     background-image: url('assets/img/bg.jpeg'); /* Replace with your background image */
     background-size: cover;
     background-position: left;
@@ -224,6 +224,52 @@
       filter: brightness(0) invert(1);
       /* Ensure icons appear white on a black background */
     }
+    @media (max-width: 768px) {
+    /* For tablets and smaller devices */
+    .top-bar {
+        flex-direction: column; /* Stack contact info and social icons */
+        padding: 10px 15px;
+    }
+
+    .contact-info {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 0; /* No extra space needed here */
+    }
+
+    .social-icons a {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile devices */
+    .top-bar {
+        padding: 10px;
+    }
+
+    .contact-info img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-info a {
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .social-icons a {
+        margin-left: 12px;
+    }
+}
 
     .navbar {
       padding: 15px;
@@ -787,12 +833,12 @@
     }
   </style>
 
-<!--   <script>
+  <script>
     if (window.innerWidth < 1024) {
       document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1024');
     }
   </script>
- -->
+
 <body>
 
 
@@ -812,6 +858,7 @@
 
       </div>
     </div>
+    </header>
     <div class="shape">
 
     </div>
